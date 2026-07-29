@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,6 +8,11 @@
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Cursos, treinamentos e consultorias para profissionais da construção civil."
     >
 
     <title>EscolaObra | Formação para Construção Civil</title>
@@ -21,7 +27,7 @@
         <div class="container cabecalho-conteudo">
 
             <a
-                href="index.html"
+                href="./index.html"
                 class="logo"
                 aria-label="Página inicial da EscolaObra"
             >
@@ -40,14 +46,22 @@
                 ☰
             </button>
 
-            <nav class="menu" id="menu">
+            <nav
+                class="menu"
+                id="menu"
+                aria-label="Menu principal"
+            >
                 <a href="#inicio">Início</a>
                 <a href="#cursos">Cursos</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
                 <a href="#depoimentos">Depoimentos</a>
-                <a href="#palestras ">Palestras e Treinamentos</a>
-                <a href="#cursos" class="botao-cursos">
+                <a href="#palestras">Palestras e Treinamentos</a>
+
+                <a
+                    href="#cursos"
+                    class="botao-cursos"
+                >
                     Conheça os cursos
                 </a>
             </nav>
@@ -58,8 +72,11 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- HERO -->
-        <section class="hero" id="inicio">
+        <!-- SEÇÃO PRINCIPAL -->
+        <section
+            class="hero"
+            id="inicio"
+        >
             <div class="container hero-conteudo">
 
                 <div class="hero-texto">
@@ -77,7 +94,7 @@
 
                     <p>
                         Cursos, e-books e treinamentos desenvolvidos
-                        por um Engenheiro Civil, com conteúdo baseado
+                        por um engenheiro civil, com conteúdo baseado
                         na realidade do canteiro de obras.
                     </p>
 
@@ -91,7 +108,7 @@
                         </a>
 
                         <a
-                            href="https://wa.me/63999570763"
+                            href="https://wa.me/5563999570763"
                             class="botao botao-whatsapp"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -106,23 +123,29 @@
                         <span>✓ Linguagem acessível</span>
                         <span>✓ Experiência real de obra</span>
                     </div>
-                </div>
-               <div class="hero-imagem">
 
-    <img
-        src="./img/escolaobra2.Jpg.png"
-        alt="Renilton Cristo - Engenheiro Civil e fundador da EscolaObra"
-        class="foto-hero"
-    >
-</div>
-             </div>
+                </div>
+
+                <div class="hero-imagem">
+                    <img
+                        src="./img/escolaobra2.Jpg.png"
+                        alt="Renilton Cristo, engenheiro civil e fundador da EscolaObra"
+                        class="foto-hero"
+                    >
+                </div>
+
+            </div>
         </section>
 
         <!-- CURSOS -->
-        <section class="cursos" id="cursos">
+        <section
+            class="cursos"
+            id="cursos"
+        >
             <div class="container">
 
                 <div class="secao-cabecalho">
+
                     <span class="secao-etiqueta">
                         Formações EscolaObra
                     </span>
@@ -136,11 +159,14 @@
                         conteúdo prático e foco na realidade da
                         construção civil.
                     </p>
+
                 </div>
 
                 <div class="grade-cursos">
 
+                    <!-- CURSO 1 -->
                     <article class="cartao-curso">
+
                         <div
                             class="curso-icone"
                             aria-hidden="true"
@@ -166,13 +192,19 @@
                             <li>✓ Planejamento de obras</li>
                         </ul>
 
-                        <a href="#contato" class="curso-link">
+                        <a
+                            href="#contato"
+                            class="curso-link"
+                        >
                             Saiba mais
                             <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
 
+                    <!-- CURSO 2 -->
                     <article class="cartao-curso">
+
                         <div
                             class="curso-icone"
                             aria-hidden="true"
@@ -198,13 +230,19 @@
                             <li>✓ Boas práticas de execução</li>
                         </ul>
 
-                        <a href="#contato" class="curso-link">
+                        <a
+                            href="#contato"
+                            class="curso-link"
+                        >
                             Saiba mais
                             <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
 
+                    <!-- CURSO 3 -->
                     <article class="cartao-curso">
+
                         <div
                             class="curso-icone"
                             aria-hidden="true"
@@ -230,13 +268,19 @@
                             <li>✓ Projetos de instalações</li>
                         </ul>
 
-                        <a href="#contato" class="curso-link">
+                        <a
+                            href="#contato"
+                            class="curso-link"
+                        >
                             Saiba mais
                             <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
 
+                    <!-- CURSO 4 -->
                     <article class="cartao-curso">
+
                         <div
                             class="curso-icone"
                             aria-hidden="true"
@@ -262,267 +306,406 @@
                             <li>✓ Segurança nas instalações</li>
                         </ul>
 
-                        <a href="#contato" class="curso-link">
+                        <a
+                            href="#contato"
+                            class="curso-link"
+                        >
                             Saiba mais
                             <span aria-hidden="true">→</span>
                         </a>
+
                     </article>
 
                 </div>
 
             </div>
         </section>
-        <section class="palestras" id="palestras">
-    <div class="container">
 
-        <div class="titulo-secao">
-            <h2>Treinamentos e Palestras</h2>
+        <!-- PALESTRAS E TREINAMENTOS -->
+        <section
+            class="palestras"
+            id="palestras"
+        >
+            <div class="container">
 
-            <p>
-                Capacitação prática para empresas, órgãos públicos,
-                construtoras e equipes de obra.
-            </p>
-        </div>
+                <div class="titulo-secao">
 
-        <div class="cards-palestras">
+                    <span class="secao-etiqueta">
+                        Soluções para empresas
+                    </span>
 
-            <article class="card-palestra">
+                    <h2>Treinamentos e Palestras</h2>
 
-                <h3>Treinamentos In Company</h3>
+                    <p>
+                        Capacitação prática para empresas, órgãos públicos,
+                        construtoras e equipes de obra.
+                    </p>
 
-                <p>
-                    Cursos internos voltados para equipes de construção,
-                    segurança, produtividade e liderança.
-                </p>
+                </div>
 
-            </article>
+                <div class="cards-palestras">
 
-            <article class="card-palestra">
+                    <article class="card-palestra">
 
-                <h3>Palestras Motivacionais</h3>
+                        <h3>Treinamentos In Company</h3>
 
-                <p>
-                    Desenvolvimento profissional, liderança,
-                    valorização da equipe e crescimento na construção civil.
-                </p>
+                        <p>
+                            Cursos internos voltados para equipes da construção
+                            civil, com temas relacionados à segurança,
+                            produtividade e liderança.
+                        </p>
 
-            </article>
+                    </article>
 
-            <article class="card-palestra">
+                    <article class="card-palestra">
 
-                <h3>Consultoria Técnica</h3>
+                        <h3>Palestras Motivacionais</h3>
 
-                <p>
-                    Orientação para empresas e profissionais sobre gestão,
-                    execução e qualidade das obras.
-                </p>
+                        <p>
+                            Desenvolvimento profissional, liderança,
+                            valorização da equipe e crescimento
+                            na construção civil.
+                        </p>
 
-            </article>
+                    </article>
 
-        </div>
+                    <article class="card-palestra">
 
-    </div>
-</section>
-<section class="depoimentos" id="depoimentos">
+                        <h3>Consultoria Técnica</h3>
 
-    <div class="container">
+                        <p>
+                            Orientação para empresas e profissionais
+                            sobre gestão, execução, planejamento
+                            e qualidade das obras.
+                        </p>
 
-        <div class="titulo-secao">
+                    </article>
 
-            <h2>O que nossos alunos dizem</h2>
+                </div>
 
-            <p>
-                Conheça a opinião de quem participou dos nossos cursos e treinamentos.
-            </p>
+            </div>
+        </section>
 
-        </div>
+        <!-- DEPOIMENTOS -->
+        <section
+            class="depoimentos"
+            id="depoimentos"
+        >
+            <div class="container">
 
-        <div class="cards-depoimentos">
+                <div class="titulo-secao">
 
-            <article class="card-depoimento">
+                    <span class="secao-etiqueta">
+                        Depoimentos
+                    </span>
 
-                <p class="texto">
-                    "Excelente curso! A linguagem é simples e muito prática."
-                </p>
+                    <h2>O que nossos alunos dizem</h2>
 
-                <h4>Carlos Silva</h4>
+                    <p>
+                        Conheça a opinião de quem participou
+                        dos nossos cursos e treinamentos.
+                    </p>
 
-                <span>Mestre de Obras</span>
+                </div>
 
-            </article>
+                <div class="cards-depoimentos">
 
-            <article class="card-depoimento">
+                    <article class="card-depoimento">
 
-                <p class="texto">
-                    "Consegui melhorar meu desempenho na obra depois do treinamento."
-                </p>
+                        <p class="texto">
+                            “Excelente curso! A linguagem é simples
+                            e muito prática.”
+                        </p>
 
-                <h4>José Oliveira</h4>
+                        <h3>Carlos Silva</h3>
 
-                <span>Pedreiro</span>
+                        <span>Mestre de Obras</span>
 
-            </article>
+                    </article>
 
-            <article class="card-depoimento">
+                    <article class="card-depoimento">
 
-                <p class="texto">
-                    "Professor muito didático e com bastante experiência prática."
-                </p>
+                        <p class="texto">
+                            “Consegui melhorar meu desempenho na obra
+                            depois do treinamento.”
+                        </p>
 
-                <h4>Maria Souza</h4>
+                        <h3>José Oliveira</h3>
 
-                <span>Técnica em Edificações</span>
+                        <span>Pedreiro</span>
 
-            </article>
+                    </article>
 
-        </div>
+                    <article class="card-depoimento">
 
-    </div>
+                        <p class="texto">
+                            “Professor muito didático e com bastante
+                            experiência prática.”
+                        </p>
 
-</section>
+                        <h3>Maria Souza</h3>
+
+                        <span>Técnica em Edificações</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- SOBRE A ESCOLAOBRA -->
-<section class="sobre" id="sobre">
-    <div class="container sobre-conteudo">
+        <section
+            class="sobre"
+            id="sobre"
+        >
+            <div class="container sobre-conteudo">
 
-        <div class="sobre-imagem">
-           <img
-    src="./img/escolaobra3.Jpg"
-    alt="Renilton Cristo - Engenheiro Civil e fundador da EscolaObra"
-    class="foto-hero">
-        </div>
+                <div class="sobre-imagem">
 
-        <div class="sobre-texto">
-            <span class="secao-etiqueta">Sobre a EscolaObra</span>
+                    <img
+                        src="./img/escolaobra3.Jpg"
+                        alt="Renilton Cristo durante uma atividade profissional da EscolaObra"
+                        class="foto-hero"
+                        loading="lazy"
+                    >
 
-            <h2>Experiência de obra transformada em conhecimento</h2>
+                </div>
 
-            <p>
-                A EscolaObra nasceu com o propósito de tornar o conhecimento
-                da construção civil mais acessível, prático e aplicável.
-            </p>
+                <div class="sobre-texto">
 
-            <p>
-                Os conteúdos são desenvolvidos por Renilton Cristo,
-                engenheiro civil com experiência em execução, supervisão
-                e acompanhamento de obras.
-            </p>
+                    <span class="secao-etiqueta">
+                        Sobre a EscolaObra
+                    </span>
 
-            <ul class="sobre-destaques">
-                <li>Conteúdo baseado na realidade do canteiro de obras</li>
-                <li>Linguagem clara e acessível</li>
-                <li>Formação para estudantes e profissionais</li>
-            </ul>
+                    <h2>
+                        Experiência de obra transformada em conhecimento
+                    </h2>
 
-            <a href="#contato" class="botao botao-primario">
-                Conheça nossos cursos
-            </a>
-        </div>
+                    <p>
+                        A EscolaObra nasceu com o propósito de tornar
+                        o conhecimento da construção civil mais acessível,
+                        prático e aplicável.
+                    </p>
 
-    </div>
-</section>
-<!-- CONTATO -->
-<section class="contato" id="contato">
-    <div class="container contato-conteudo">
+                    <p>
+                        Os conteúdos são desenvolvidos por Renilton Cristo,
+                        engenheiro civil com experiência em execução,
+                        supervisão e acompanhamento de obras.
+                    </p>
 
-        <div class="contato-informacoes">
-            <span class="secao-etiqueta">Entre em contato</span>
+                    <ul class="sobre-destaques">
+                        <li>
+                            Conteúdo baseado na realidade do canteiro de obras
+                        </li>
 
-            <h2>Vamos conversar sobre sua formação?</h2>
+                        <li>
+                            Linguagem clara e acessível
+                        </li>
 
-            <p>
-                Fale com a EscolaObra para tirar dúvidas sobre cursos,
-                treinamentos, consultorias e parcerias.
-            </p>
+                        <li>
+                            Formação para estudantes e profissionais
+                        </li>
+                    </ul>
 
-            <div class="contato-canais">
+                    <a
+                        href="#cursos"
+                        class="botao botao-principal"
+                    >
+                        Conheça nossos cursos
+                    </a>
 
-                <a
-                    href="https://wa.me/63999570763"
-                    class="contato-canal"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section
+            class="contato"
+            id="contato"
+        >
+            <div class="container contato-conteudo">
+
+                <div class="contato-informacoes">
+
+                    <span class="secao-etiqueta">
+                        Entre em contato
+                    </span>
+
+                    <h2>
+                        Vamos conversar sobre sua formação?
+                    </h2>
+
+                    <p>
+                        Fale com a EscolaObra para tirar dúvidas sobre
+                        cursos, treinamentos, consultorias e parcerias.
+                    </p>
+
+                    <div class="contato-canais">
+
+                        <a
+                            href="https://wa.me/5563999570763"
+                            class="contato-canal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="contato-canal-titulo">
+                                WhatsApp
+                            </span>
+
+                            <span>
+                                Fale diretamente com nossa equipe
+                            </span>
+                        </a>
+
+                        <a
+                            href="mailto:escollaobraobra@gmail.com"
+                            class="contato-canal"
+                        >
+                            <span class="contato-canal-titulo">
+                                E-mail
+                            </span>
+
+                            <span>
+                                escollaobraobra@gmail.com
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <form
+                    class="formulario-contato"
+                    id="formularioContato"
                 >
-                    <span class="contato-canal-titulo">WhatsApp</span>
-                    <span>Fale diretamente com nossa equipe</span>
-                </a>
 
-                <a
-                    href="mailto:escollaobraobra@gmail.com"
-                    class="contato-canal"
-                >
-                    <span class="contato-canal-titulo">E-mail</span>
-                    <span>contato@escolaobra.com.br</span>
-                </a>
+                    <div class="campo-formulario">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="campo-formulario">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="campo-formulario">
+
+                        <label for="assunto">
+                            Assunto
+                        </label>
+
+                        <select
+                            id="assunto"
+                            name="assunto"
+                            required
+                        >
+                            <option value="">
+                                Selecione um assunto
+                            </option>
+
+                            <option value="curso">
+                                Informações sobre cursos
+                            </option>
+
+                            <option value="treinamento">
+                                Palestras e treinamentos
+                            </option>
+
+                            <option value="consultoria">
+                                Consultoria de obra
+                            </option>
+
+                            <option value="parceria">
+                                Parcerias
+                            </option>
+
+                            <option value="outro">
+                                Outro assunto
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="campo-formulario">
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            placeholder="Escreva sua mensagem"
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="botao botao-principal"
+                    >
+                        Enviar mensagem
+                    </button>
+
+                </form>
 
             </div>
-        </div>
-
-        <form class="formulario-contato" id="formularioContato">
-
-            <div class="campo-formulario">
-                <label for="nome">Nome</label>
-
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite seu nome"
-                    autocomplete="name"
-                    required
-                >
-            </div>
-
-            <div class="campo-formulario">
-                <label for="email">E-mail</label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Digite seu e-mail"
-                    autocomplete="email"
-                    required
-                >
-            </div>
-
-            <div class="campo-formulario">
-                <label for="assunto">Assunto</label>
-
-                <select id="assunto" name="assunto" required>
-                    <option value="">Selecione um assunto</option>
-                    <option value="curso">Informações sobre cursos</option>
-                    <option value="consultoria">Consultoria de obra</option>
-                    <option value="parceria">Parcerias</option>
-                    <option value="outro">Outro assunto</option>
-                </select>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="mensagem">Mensagem</label>
-
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows="5"
-                    placeholder="Escreva sua mensagem"
-                    required
-                ></textarea>
-            </div>
-
-            <button type="submit" class="botao botao-primario">
-                Enviar mensagem
-            </button>
-
-        </form>
-
-    </div>
-</section>
+        </section>
 
     </main>
 
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+
+            <p>
+                © <span id="anoAtual"></span> EscolaObra.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
     <script>
         const botaoMenu = document.getElementById("botaoMenu");
         const menu = document.getElementById("menu");
+        const anoAtual = document.getElementById("anoAtual");
+        const formularioContato =
+            document.getElementById("formularioContato");
+
+        if (anoAtual) {
+            anoAtual.textContent = new Date().getFullYear();
+        }
 
         if (botaoMenu && menu) {
             botaoMenu.addEventListener("click", function () {
@@ -563,8 +746,47 @@
                 });
             });
         }
+
+        if (formularioContato) {
+            formularioContato.addEventListener(
+                "submit",
+                function (evento) {
+                    evento.preventDefault();
+
+                    const nome =
+                        document.getElementById("nome").value.trim();
+
+                    const email =
+                        document.getElementById("email").value.trim();
+
+                    const assunto =
+                        document.getElementById("assunto").value;
+
+                    const mensagem =
+                        document.getElementById("mensagem").value.trim();
+
+                    const textoWhatsApp =
+                        "Olá, EscolaObra!" +
+                        "\n\nNome: " + nome +
+                        "\nE-mail: " + email +
+                        "\nAssunto: " + assunto +
+                        "\n\nMensagem: " + mensagem;
+
+                    const enderecoWhatsApp =
+                        "https://wa.me/5563999570763?text=" +
+                        encodeURIComponent(textoWhatsApp);
+
+                    window.open(
+                        enderecoWhatsApp,
+                        "_blank",
+                        "noopener,noreferrer"
+                    );
+                }
+            );
+        }
     </script>
 
 </body>
 
 </html>
+```

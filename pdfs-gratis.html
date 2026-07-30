@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baixe gratuitamente apostilas, e-books e materiais de construção civil da EscolaObra.">
+    <title>PDFs Grátis | EscolaObra</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="./index.html" class="logo" aria-label="Página inicial da EscolaObra">
+                <span class="logo-escola">Escola</span><span class="logo-obra">Obra</span>
+            </a>
+            <button class="botao-menu" id="botaoMenu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+            <nav class="menu" id="menu" aria-label="Menu principal">
+                <a href="./index.html">Início</a>
+                <a href="./cursos-gratis.html">Cursos grátis</a>
+                <a href="./pdfs-gratis.html" class="ativo">PDFs grátis</a>
+                <a href="./cursos.html">Cursos completos</a>
+                <a href="./index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-conteudo">
+                <div class="hero-texto">
+                    <span class="etiqueta">Biblioteca gratuita</span>
+                    <h1>Materiais gratuitos para quem vive a construção civil</h1>
+                    <p>Leia ou baixe gratuitamente apostilas, e-books, guias e materiais práticos produzidos pela EscolaObra.</p>
+                    <a href="#biblioteca" class="botao-principal">Ver materiais</a>
+                </div>
+                <div class="hero-ilustracao" aria-hidden="true"><span>📚</span></div>
+            </div>
+        </section>
+
+        <section class="biblioteca" id="biblioteca">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <span class="etiqueta">Estude gratuitamente</span>
+                    <h2>Biblioteca EscolaObra</h2>
+                    <p>Escolha um material para ler no navegador ou baixar no seu computador ou celular.</p>
+                </div>
+
+                <div class="area-pesquisa">
+                    <label for="pesquisaPdf">Pesquisar material</label>
+                    <input type="search" id="pesquisaPdf" placeholder="Exemplo: matemática, projetos, concreto..." autocomplete="off">
+                </div>
+
+                <p class="mensagem-resultado" id="mensagemResultado" aria-live="polite"></p>
+
+                <div class="grade-pdfs" id="gradePdfs">
+                    <article class="cartao-pdf" data-titulo="Matemática básica para pedreiro" data-categoria="matemática cálculos obra">
+                        <div class="capa-pdf capa-matematica">
+                            <span class="icone-capa">📐</span><small>EscolaObra</small><strong>Matemática Básica para Pedreiro</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Matemática</span>
+                            <h3>Matemática Básica para Pedreiro</h3>
+                            <p>Aprenda operações, medidas, áreas e cálculos utilizados no dia a dia do canteiro de obras.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/matematica-basica-pedreiro.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/matematica-basica-pedreiro.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cartao-pdf" data-titulo="Introdução à leitura de projetos" data-categoria="projetos plantas arquitetura engenharia">
+                        <div class="capa-pdf capa-projetos">
+                            <span class="icone-capa">📏</span><small>EscolaObra</small><strong>Introdução à Leitura de Projetos</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Projetos</span>
+                            <h3>Introdução à Leitura de Projetos</h3>
+                            <p>Conheça plantas, escalas, cotas, símbolos e os principais elementos de um projeto.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/leitura-de-projetos.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/leitura-de-projetos.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cartao-pdf" data-titulo="Como calcular quantidade de tijolos" data-categoria="tijolos alvenaria cálculo materiais">
+                        <div class="capa-pdf capa-tijolos">
+                            <span class="icone-capa">🧱</span><small>EscolaObra</small><strong>Como Calcular Tijolos</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Alvenaria</span>
+                            <h3>Como Calcular Quantidade de Tijolos</h3>
+                            <p>Veja um método simples para estimar a quantidade de tijolos necessária para uma parede.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/calculo-de-tijolos.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/calculo-de-tijolos.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cartao-pdf" data-titulo="Como calcular concreto" data-categoria="concreto volume cimento areia brita cálculo">
+                        <div class="capa-pdf capa-concreto">
+                            <span class="icone-capa">🏗️</span><small>EscolaObra</small><strong>Como Calcular Concreto</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Concreto</span>
+                            <h3>Como Calcular Concreto</h3>
+                            <p>Aprenda a calcular o volume de concreto necessário para elementos básicos da obra.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/calculo-de-concreto.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/calculo-de-concreto.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cartao-pdf" data-titulo="Ferramentas essenciais da construção" data-categoria="ferramentas equipamentos pedreiro construção">
+                        <div class="capa-pdf capa-ferramentas">
+                            <span class="icone-capa">🛠️</span><small>EscolaObra</small><strong>Ferramentas Essenciais</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Ferramentas</span>
+                            <h3>Ferramentas Essenciais da Construção</h3>
+                            <p>Conheça as principais ferramentas usadas por pedreiros, mestres de obras e auxiliares.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/ferramentas-da-construcao.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/ferramentas-da-construcao.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cartao-pdf" data-titulo="Segurança no canteiro de obras" data-categoria="segurança epi nr18 canteiro">
+                        <div class="capa-pdf capa-seguranca">
+                            <span class="icone-capa">⛑️</span><small>EscolaObra</small><strong>Segurança no Canteiro</strong>
+                        </div>
+                        <div class="conteudo-pdf">
+                            <span class="categoria">Segurança</span>
+                            <h3>Segurança no Canteiro de Obras</h3>
+                            <p>Veja cuidados essenciais, uso de EPIs e boas práticas para reduzir acidentes.</p>
+                            <div class="botoes-pdf">
+                                <a href="./pdf/seguranca-no-canteiro.pdf" target="_blank" rel="noopener noreferrer" class="botao-secundario">Ler PDF</a>
+                                <a href="./pdf/seguranca-no-canteiro.pdf" download class="botao-download">Baixar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="chamada-cursos">
+            <div class="container chamada-conteudo">
+                <div>
+                    <span class="etiqueta">Continue aprendendo</span>
+                    <h2>Conheça os cursos completos da EscolaObra</h2>
+                    <p>Tenha acesso a videoaulas, materiais complementares, atividades práticas e certificados.</p>
+                </div>
+                <a href="./cursos.html" class="botao-principal">Ver cursos completos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container"><p>© 2026 EscolaObra. Formação prática para construção civil.</p></div>
+    </footer>
+
+    <script src="./js/pdfs-gratis.js"></script>
+</body>
+</html>

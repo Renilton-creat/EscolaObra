@@ -824,3 +824,287 @@ button {
     color:#F57C00;
 
 }
+/* =====================================================
+   PÁGINA PDFs GRÁTIS
+===================================================== */
+
+.hero-ilustracao{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    min-height:320px;
+
+    background:linear-gradient(135deg,#ffb347,#f28c00);
+
+    border-radius:20px;
+
+    color:#ffffff;
+    font-size:8rem;
+}
+
+.biblioteca{
+    padding:80px 0;
+}
+
+.cabecalho-secao{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.cabecalho-secao h2{
+    margin:15px 0;
+    font-size:2.5rem;
+}
+
+.cabecalho-secao p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+}
+
+.area-pesquisa{
+    max-width:700px;
+    margin:0 auto 50px;
+}
+
+.area-pesquisa input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:1rem;
+}
+
+.grade-pdfs{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.cartao-pdf{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.cartao-pdf:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.capa-pdf{
+
+    height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:25px;
+
+    color:white;
+}
+
+.icone-capa{
+
+    font-size:60px;
+}
+
+.capa-matematica{
+    background:#2d7ff9;
+}
+
+.capa-projetos{
+    background:#00a36c;
+}
+
+.capa-tijolos{
+    background:#cc5b36;
+}
+
+.capa-concreto{
+    background:#5c6b73;
+}
+
+.capa-ferramentas{
+    background:#d58b00;
+}
+
+.capa-seguranca{
+    background:#d32f2f;
+}
+
+.conteudo-pdf{
+
+    padding:25px;
+}
+
+.categoria{
+
+    display:inline-block;
+
+    background:#fff3dd;
+
+    color:#b86a00;
+
+    padding:5px 12px;
+
+    border-radius:50px;
+
+    font-size:.75rem;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.conteudo-pdf h3{
+
+    margin-bottom:15px;
+}
+
+.conteudo-pdf p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+}
+
+.botoes-pdf{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.botao-secundario,
+.botao-download{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.botao-secundario{
+
+    border:2px solid #f28c00;
+
+    color:#f28c00;
+}
+
+.botao-secundario:hover{
+
+    background:#f28c00;
+
+    color:white;
+}
+
+.botao-download{
+
+    background:#f28c00;
+
+    color:white;
+}
+
+.botao-download:hover{
+
+    background:#d97900;
+}
+
+.chamada-cursos{
+
+    padding:80px 0;
+
+    background:#1d1d1d;
+
+    color:white;
+
+    margin-top:90px;
+}
+
+.chamada-conteudo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.rodape{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#111;
+
+    color:#aaa;
+}
+
+/*==========================
+RESPONSIVO
+==========================*/
+
+@media(max-width:768px){
+
+    .hero-ilustracao{
+
+        min-height:220px;
+
+        font-size:5rem;
+    }
+
+    .cabecalho-secao h2{
+
+        font-size:2rem;
+    }
+
+    .botoes-pdf{
+
+        flex-direction:column;
+    }
+
+    .chamada-conteudo{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}

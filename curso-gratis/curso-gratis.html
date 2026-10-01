@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Cursos gratuitos de construção civil da EscolaObra.">
+
+    <title>Cursos Gratuitos | EscolaObra</title>
+
+    <!-- CSS principal da EscolaObra -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+
+        /* =========================
+           PÁGINA CURSOS GRATUITOS
+        ========================== */
+
+        .pagina-cursos-gratis {
+            padding: 60px 20px;
+            background: #f5f5f5;
+            min-height: 70vh;
+        }
+
+        .titulo-cursos-gratis {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 45px;
+        }
+
+        .titulo-cursos-gratis h1 {
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+        }
+
+        .titulo-cursos-gratis p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .grade-cursos-gratis {
+            max-width: 1200px;
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(270px, 1fr));
+
+            gap: 25px;
+        }
+
+        .cartao-curso-gratis {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .cartao-curso-gratis:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.13);
+        }
+
+        .capa-curso-gratis {
+            min-height: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17324d,
+                    #285f87
+                );
+
+            color: white;
+        }
+
+        .icone-curso {
+            font-size: 4rem;
+        }
+
+        .conteudo-curso-gratis {
+            padding: 25px;
+        }
+
+        .categoria-curso {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            font-size: 0.85rem;
+            font-weight: bold;
+
+            color: #555;
+        }
+
+        .conteudo-curso-gratis h2 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .conteudo-curso-gratis p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .informacoes-curso {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 22px;
+
+            font-size: 0.9rem;
+        }
+
+        .informacoes-curso span {
+            background: #f0f0f0;
+
+            padding: 6px 10px;
+
+            border-radius: 6px;
+        }
+
+        .botao-acessar-curso {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            border-radius: 7px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            background: #17324d;
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .botao-acessar-curso:hover {
+            opacity: 0.9;
+        }
+
+        .curso-em-breve {
+            opacity: 0.75;
+        }
+
+        .botao-em-breve {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            border-radius: 7px;
+
+            background: #ddd;
+
+            color: #555;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- =========================
+     CABEÇALHO
+========================== -->
+
+<header class="cabecalho">
+
+    <div class="container cabecalho-conteudo">
+
+        <a href="./index.html"
+           class="logo"
+           aria-label="Página inicial da EscolaObra">
+
+            <span class="logo-escola">
+                Escola
+            </span>
+
+            <span class="logo-obra">
+                Obra
+            </span>
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="./index.html">
+                Início
+            </a>
+
+            <a href="./cursos-gratis.html"
+               class="ativo">
+                Cursos Grátis
+            </a>
+
+            <a href="./pdfs-gratis.html">
+                PDFs Grátis
+            </a>
+
+            <a href="./cursos.html">
+                Cursos Completos
+            </a>
+
+            <a href="./index.html#contato">
+                Contato
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================== -->
+
+<main>
+
+    <section class="pagina-cursos-gratis">
+
+        <div class="titulo-cursos-gratis">
+
+            <span class="etiqueta">
+                EscolaObra
+            </span>
+
+            <h1>
+                Cursos Gratuitos
+            </h1>
+
+            <p>
+                Escolha um curso e comece a estudar.
+                Conteúdo prático voltado para quem
+                trabalha ou deseja trabalhar na
+                construção civil.
+            </p>
+
+        </div>
+
+
+        <div class="grade-cursos-gratis">
+
+
+            <!-- =========================
+                 CURSO DE MATEMÁTICA
+            ========================== -->
+
+            <article class="cartao-curso-gratis">
+
+                <div class="capa-curso-gratis">
+
+                    <span class="icone-curso">
+                        📐
+                    </span>
+
+                </div>
+
+
+                <div class="conteudo-curso-gratis">
+
+                    <span class="categoria-curso">
+                        MATEMÁTICA
+                    </span>
+
+                    <h2>
+                        Matemática Básica para Pedreiro
+                    </h2>
+
+                    <p>
+                        Aprenda operações básicas,
+                        medidas, perímetros, áreas,
+                        volumes e cálculos utilizados
+                        no dia a dia da construção.
+                    </p>
+
+
+                    <div class="informacoes-curso">
+
+                        <span>
+                            🎓 Gratuito
+                        </span>
+
+                        <span>
+                            📱 Online
+                        </span>
+
+                        <span>
+                            🏗️ Prático
+                        </span>
+
+                    </div>
+
+
+                    <!--
+                        ESTE LINK ENTRA NA PASTA
+                        DO CURSO DE MATEMÁTICA
+                    -->
+
+                    <a
+                        href="./curso-gratis/matematica-pedreiro/"
+                        class="botao-acessar-curso">
+
+                        Começar Curso →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 LIDERANÇA PARA OBRAS
+                 FUTURO CURSO
+            ========================== -->
+
+            <article class="cartao-curso-gratis curso-em-breve">
+
+                <div class="capa-curso-gratis">
+
+                    <span class="icone-curso">
+                        👷
+                    </span>
+
+                </div>
+
+
+                <div class="conteudo-curso-gratis">
+
+                    <span class="categoria-curso">
+                        LIDERANÇA
+                    </span>
+
+                    <h2>
+                        Liderança para Obras
+                    </h2>
+
+                    <p>
+                        Princípios de liderança,
+                        comunicação e organização
+                        de equipes no canteiro de obras.
+                    </p>
+
+
+                    <div class="informacoes-curso">
+
+                        <span>
+                            🎓 Gratuito
+                        </span>
+
+                        <span>
+                            📱 Online
+                        </span>
+
+                    </div>
+
+
+                    <span class="botao-em-breve">
+                        Em breve
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 ORÇAMENTO DE OBRAS
+                 FUTURO CURSO
+            ========================== -->
+
+            <article class="cartao-curso-gratis curso-em-breve">
+
+                <div class="capa-curso-gratis">
+
+                    <span class="icone-curso">
+                        🧮
+                    </span>
+
+                </div>
+
+
+                <div class="conteudo-curso-gratis">
+
+                    <span class="categoria-curso">
+                        ORÇAMENTO
+                    </span>
+
+                    <h2>
+                        Introdução ao Orçamento de Obras
+                    </h2>
+
+                    <p>
+                        Aprenda conceitos básicos
+                        de quantitativos, materiais,
+                        mão de obra e custos de construção.
+                    </p>
+
+
+                    <div class="informacoes-curso">
+
+                        <span>
+                            🎓 Gratuito
+                        </span>
+
+                        <span>
+                            📱 Online
+                        </span>
+
+                    </div>
+
+
+                    <span class="botao-em-breve">
+                        Em breve
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================== -->
+
+<footer class="rodape">
+
+    <div class="container">
+
+        <p>
+            © 2026 EscolaObra.
+            Formação prática para construção civil.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

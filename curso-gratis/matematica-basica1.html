@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Matemática para Pedreiro | EscolaObra</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================== */
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+
+        .cabecalho {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+        /* =========================
+           APRESENTAÇÃO
+        ========================== */
+
+        .hero {
+            background-color: #f59e0b;
+            padding: 60px 20px;
+        }
+
+        .hero-conteudo {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 750px;
+        }
+
+        /* =========================
+           CONTAINER PRINCIPAL
+        ========================== */
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .introducao {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .introducao h2 {
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        /* =========================
+           AULAS
+        ========================== */
+
+        .titulo-modulo {
+            margin: 40px 0 20px;
+            color: #1f2937;
+        }
+
+        .aula {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .botao-aula {
+            width: 100%;
+            padding: 20px;
+
+            border: none;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .botao-aula:hover {
+            background-color: #fff7e6;
+        }
+
+        .numero-aula {
+            color: #f59e0b;
+        }
+
+        .seta {
+            font-size: 22px;
+        }
+
+        .conteudo-aula {
+            display: none;
+            padding: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        .conteudo-aula.ativa {
+            display: block;
+        }
+
+        .conteudo-aula h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .conteudo-aula p {
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           EXEMPLOS
+        ========================== */
+
+        .exemplo {
+            background-color: #fff7e6;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .formula {
+            background-color: #1f2937;
+            color: white;
+
+            padding: 15px;
+            margin: 15px 0;
+
+            border-radius: 5px;
+
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* =========================
+           EXERCÍCIOS
+        ========================== */
+
+        .exercicio {
+            background-color: #eef6ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .exercicio h3 {
+            margin-top: 0;
+        }
+
+        .exercicio input {
+            width: 100%;
+            max-width: 300px;
+
+            padding: 10px;
+            margin-top: 10px;
+
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        .exercicio button {
+            padding: 10px 20px;
+            margin-top: 10px;
+
+            border: none;
+            border-radius: 5px;
+
+            background-color: #f59e0b;
+            color: #1f2937;
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .exercicio button:hover {
+            opacity: 0.85;
+        }
+
+        .resposta {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           VÍDEO
+        ========================== */
+
+        .video {
+            position: relative;
+
+            width: 100%;
+            padding-bottom: 56.25%;
+
+            height: 0;
+
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .video iframe {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: none;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .cabecalho {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     CABEÇALHO
+========================== -->
+
+<header>
+
+    <div class="cabecalho">
+
+        <div class="logo">
+            Escola<span>Obra</span>
+        </div>
+
+        <nav>
+            <a href="./index.html">Início</a>
+            <a href="./cursos-gratis.html">Cursos Gratuitos</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     APRESENTAÇÃO DO CURSO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <h1>Matemática Básica para Pedreiro</h1>
+
+        <p>
+            Aprenda a matemática utilizada no dia a dia da construção
+            civil de maneira simples, prática e aplicada ao canteiro
+            de obras.
+        </p>
+
+    </div>
+
+</section>
+
+
+<main class="container">
+
+    <!-- INTRODUÇÃO -->
+
+    <section class="introducao">
+
+        <h2>Sobre o curso</h2>
+
+        <p>
+            Neste curso você aprenderá cálculos básicos utilizados
+            diariamente por pedreiros, serventes, mestres de obras
+            e profissionais da construção civil.
+        </p>
+
+        <p>
+            Vamos estudar medidas, áreas, volumes, porcentagens,
+            proporções, esquadro, inclinação e outros cálculos
+            importantes para execução de uma obra.
+        </p>
+
+    </section>
+
+
+    <h2 class="titulo-modulo">
+        Conteúdo do curso
+    </h2>
+
+
+    <!-- =========================
+         AULA 1
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula1', this)">
+
+            <span>
+                <span class="numero-aula">Aula 1</span>
+                — Operações básicas
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula1" class="conteudo-aula">
+
+            <h2>Operações básicas</h2>
+
+            <p>
+                As quatro operações fundamentais da matemática são:
+            </p>
+
+            <p>
+                Adição (+)<br>
+                Subtração (-)<br>
+                Multiplicação (×)<br>
+                Divisão (÷)
+            </p>
+
+
+            <h3>Exemplo na construção</h3>
+
+            <div class="exemplo">
+
+                Um pedreiro precisa levantar duas paredes.
+
+                <br><br>
+
+                A primeira possui 25 blocos por fiada.
+
+                <br>
+
+                A segunda possui 30 blocos por fiada.
+
+                <br><br>
+
+                Quantos blocos serão utilizados em uma fiada?
+
+                <div class="formula">
+                    25 + 30 = 55 blocos
+                </div>
+
+            </div>
+
+
+            <div class="exercicio">
+
+                <h3>Exercício</h3>
+
+                <p>
+                    Uma obra possui 4 paredes e cada parede
+                    utilizará 50 blocos.
+                </p>
+
+                <p>
+                    Quantos blocos serão necessários?
+                </p>
+
+                <input
+                    type="number"
+                    id="resposta1"
+                    placeholder="Digite sua resposta">
+
+                <br>
+
+                <button onclick="verificar1()">
+                    Verificar resposta
+                </button>
+
+                <p id="resultado1" class="resposta"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 2
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula2', this)">
+
+            <span>
+                <span class="numero-aula">Aula 2</span>
+                — Medidas
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula2" class="conteudo-aula">
+
+            <h2>Medidas utilizadas na obra</h2>
+
+            <p>
+                Na construção civil utilizamos principalmente:
+            </p>
+
+            <div class="formula">
+
+                1 metro = 100 centímetros
+
+                <br><br>
+
+                1 centímetro = 10 milímetros
+
+                <br><br>
+
+                1 metro = 1000 milímetros
+
+            </div>
+
+
+            <div class="exemplo">
+
+                Uma parede possui 3,50 metros.
+
+                <br><br>
+
+                Em centímetros:
+
+                <div class="formula">
+                    3,50 × 100 = 350 cm
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 3
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula3', this)">
+
+            <span>
+                <span class="numero-aula">Aula 3</span>
+                — Perímetro
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula3" class="conteudo-aula">
+
+            <h2>Perímetro</h2>
+
+            <p>
+                Perímetro é a soma dos comprimentos
+                de todos os lados.
+            </p>
+
+            <div class="exemplo">
+
+                Um quarto possui:
+
+                <br><br>
+
+                4 metros de comprimento
+
+                <br>
+
+                3 metros de largura
+
+                <div class="formula">
+                    4 + 4 + 3 + 3 = 14 metros
+                </div>
+
+                Portanto, o perímetro é:
+
+                <strong>14 metros.</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 4
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula4', this)">
+
+            <span>
+                <span class="numero-aula">Aula 4</span>
+                — Cálculo de área
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula4" class="conteudo-aula">
+
+            <h2>Cálculo de área</h2>
+
+            <p>
+                O cálculo de área é muito utilizado para calcular:
+            </p>
+
+            <p>
+                pisos, paredes, revestimentos, pintura
+                e quantidade de materiais.
+            </p>
+
+            <div class="formula">
+                Área = comprimento × largura
+            </div>
+
+
+            <div class="exemplo">
+
+                Um piso possui:
+
+                <br><br>
+
+                5 metros de comprimento
+
+                <br>
+
+                4 metros de largura
+
+                <div class="formula">
+                    5 × 4 = 20 m²
+                </div>
+
+                A área do piso é:
+
+                <strong>20 m².</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 5
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula5', this)">
+
+            <span>
+                <span class="numero-aula">Aula 5</span>
+                — Volume
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula5" class="conteudo-aula">
+
+            <h2>Cálculo de volume</h2>
+
+            <p>
+                O volume é muito importante para calcular
+                concreto, escavações e reservatórios.
+            </p>
+
+            <div class="formula">
+                Volume =
+                comprimento × largura × altura
+            </div>
+
+
+            <div class="exemplo">
+
+                Uma laje possui:
+
+                <br><br>
+
+                5 m de comprimento
+
+                <br>
+
+                4 m de largura
+
+                <br>
+
+                0,10 m de espessura
+
+                <div class="formula">
+                    5 × 4 × 0,10 = 2 m³
+                </div>
+
+                Portanto serão necessários aproximadamente:
+
+                <strong>2 m³ de concreto.</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 6
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula6', this)">
+
+            <span>
+                <span class="numero-aula">Aula 6</span>
+                — Frações e proporções
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula6" class="conteudo-aula">
+
+            <h2>Proporções na obra</h2>
+
+            <p>
+                As proporções são utilizadas principalmente
+                na preparação de concretos e argamassas.
+            </p>
+
+
+            <div class="exemplo">
+
+                Exemplo de traço:
+
+                <div class="formula">
+                    1 : 2 : 3
+                </div>
+
+                Isso pode representar:
+
+                <br><br>
+
+                1 parte de cimento
+
+                <br>
+
+                2 partes de areia
+
+                <br>
+
+                3 partes de brita
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 7
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula7', this)">
+
+            <span>
+                <span class="numero-aula">Aula 7</span>
+                — Porcentagem
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula7" class="conteudo-aula">
+
+            <h2>Porcentagem</h2>
+
+            <p>
+                A porcentagem pode ser utilizada para calcular
+                perdas e acréscimos de materiais.
+            </p>
+
+
+            <div class="exemplo">
+
+                Precisamos de 1000 blocos.
+
+                <br><br>
+
+                Queremos acrescentar 10% para perdas.
+
+                <div class="formula">
+                    1000 × 10 ÷ 100 = 100
+                </div>
+
+                Portanto:
+
+                <div class="formula">
+                    1000 + 100 = 1100 blocos
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 8
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula8', this)">
+
+            <span>
+                <span class="numero-aula">Aula 8</span>
+                — Esquadro 3-4-5
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula8" class="conteudo-aula">
+
+            <h2>Esquadro utilizando 3-4-5</h2>
+
+            <p>
+                Uma das técnicas mais conhecidas no canteiro
+                para verificar um ângulo de 90° utiliza
+                o triângulo 3-4-5.
+            </p>
+
+
+            <div class="formula">
+
+                3² + 4² = 5²
+
+                <br><br>
+
+                9 + 16 = 25
+
+            </div>
+
+
+            <div class="exemplo">
+
+                Podemos marcar:
+
+                <br><br>
+
+                3 metros em um lado
+
+                <br>
+
+                4 metros no outro lado
+
+                <br>
+
+                e conferir a diagonal.
+
+                <br><br>
+
+                A diagonal deverá medir:
+
+                <strong>5 metros.</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 9
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula9', this)">
+
+            <span>
+                <span class="numero-aula">Aula 9</span>
+                — Inclinação e caimento
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula9" class="conteudo-aula">
+
+            <h2>Inclinação e caimento</h2>
+
+            <p>
+                O cálculo de inclinação é utilizado em pisos,
+                telhados e tubulações.
+            </p>
+
+
+            <div class="formula">
+                Inclinação (%) =
+                desnível ÷ comprimento × 100
+            </div>
+
+
+            <div class="exemplo">
+
+                Um piso possui 5 metros de comprimento
+                e precisa de 1% de caimento.
+
+                <div class="formula">
+                    5 × 0,01 = 0,05 m
+                </div>
+
+                Como:
+
+                <div class="formula">
+                    0,05 m = 5 cm
+                </div>
+
+                O desnível deverá ser de:
+
+                <strong>5 centímetros.</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AULA 10
+    ========================== -->
+
+    <section class="aula">
+
+        <button class="botao-aula"
+                onclick="abrirAula('aula10', this)">
+
+            <span>
+                <span class="numero-aula">Aula 10</span>
+                — Exercício final
+            </span>
+
+            <span class="seta">+</span>
+
+        </button>
+
+
+        <div id="aula10" class="conteudo-aula">
+
+            <h2>Exercício final</h2>
+
+            <p>
+                Um cômodo possui:
+            </p>
+
+            <p>
+                5 metros de comprimento
+                e 4 metros de largura.
+            </p>
+
+            <p>
+                Qual é a área do piso?
+            </p>
+
+
+            <div class="exercicio">
+
+                <input
+                    type="number"
+                    id="respostaFinal"
+                    placeholder="Digite a área em m²">
+
+                <br>
+
+                <button onclick="verificarFinal()">
+                    Conferir
+                </button>
+
+                <p id="resultadoFinal"
+                   class="resposta">
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================== -->
+
+<footer>
+
+    <p>
+        © 2026 EscolaObra
+    </p>
+
+    <p>
+        Formação prática para construção civil
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    function abrirAula(id, botao) {
+
+        const aula = document.getElementById(id);
+
+        const seta = botao.querySelector(".seta");
+
+        aula.classList.toggle("ativa");
+
+        if (aula.classList.contains("ativa")) {
+
+            seta.textContent = "−";
+
+        } else {
+
+            seta.textContent = "+";
+
+        }
+
+    }
+
+
+    function verificar1() {
+
+        const resposta =
+            Number(document.getElementById("resposta1").value);
+
+        const resultado =
+            document.getElementById("resultado1");
+
+
+        if (resposta === 200) {
+
+            resultado.textContent =
+                "✓ Correto! 4 × 50 = 200 blocos.";
+
+        } else {
+
+            resultado.textContent =
+                "Resposta incorreta. Tente novamente.";
+
+        }
+
+    }
+
+
+    function verificarFinal() {
+
+        const resposta =
+            Number(document.getElementById("respostaFinal").value);
+
+        const resultado =
+            document.getElementById("resultadoFinal");
+
+
+        if (resposta === 20) {
+
+            resultado.textContent =
+                "✓ Correto! 5 × 4 = 20 m².";
+
+        } else {
+
+            resultado.textContent =
+                "Resposta incorreta. Lembre-se: área = comprimento × largura.";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

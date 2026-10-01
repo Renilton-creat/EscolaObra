@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matemática Básica para Pedreiros | EscolaObra</title>
+
+    <style>
+
+        /* ========================================
+           CONFIGURAÇÕES GERAIS
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* ========================================
+           CABEÇALHO
+        ======================================== */
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+
+        .cabecalho {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+            background-color: #111827;
+            color: white;
+
+            padding: 70px 20px;
+        }
+
+        .hero-conteudo {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .categoria {
+            display: inline-block;
+
+            background-color: #f59e0b;
+            color: #111827;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+
+            max-width: 800px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+
+            font-size: 19px;
+
+            color: #d1d5db;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ========================================
+           BOTÕES
+        ======================================== */
+
+        .botao {
+            display: inline-block;
+
+            background-color: #f59e0b;
+            color: #111827;
+
+            padding: 13px 24px;
+
+            text-decoration: none;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 15px;
+        }
+
+        .botao:hover {
+            background-color: #d97706;
+        }
+
+
+        /* ========================================
+           CONTEÚDO PRINCIPAL
+        ======================================== */
+
+        main {
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+
+            margin-bottom: 30px;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+
+            color: #1f2937;
+        }
+
+        section h3 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+
+            color: #374151;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+
+
+        /* ========================================
+           INFORMAÇÕES DO CURSO
+        ======================================== */
+
+        .informacoes {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+        }
+
+        .info {
+            background-color: #f9fafb;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            text-align: center;
+        }
+
+        .info strong {
+            display: block;
+
+            color: #f59e0b;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* ========================================
+           LISTAS
+        ======================================== */
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+
+        /* ========================================
+           PROGRESSO
+        ======================================== */
+
+        .progresso-container {
+            margin: 25px 0;
+        }
+
+        .barra {
+            width: 100%;
+
+            height: 22px;
+
+            background-color: #e5e7eb;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            margin-bottom: 10px;
+        }
+
+        .barra-progresso {
+            width: 0%;
+
+            height: 100%;
+
+            background-color: #f59e0b;
+
+            transition: width 0.4s;
+        }
+
+
+        /* ========================================
+           AULAS
+        ======================================== */
+
+        .aula {
+            border: 1px solid #e5e7eb;
+
+            border-radius: 8px;
+
+            margin-bottom: 18px;
+
+            overflow: hidden;
+        }
+
+        .aula-titulo {
+            background-color: #f9fafb;
+
+            padding: 20px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .aula-titulo:hover {
+            background-color: #f3f4f6;
+        }
+
+        .aula-conteudo {
+            display: none;
+
+            padding: 25px;
+        }
+
+        .aula-conteudo.ativo {
+            display: block;
+        }
+
+
+        /* ========================================
+           VIDEOAULAS
+        ======================================== */
+
+        .video-area {
+            margin: 25px 0;
+        }
+
+        .video-area h3 {
+            margin-bottom: 15px;
+        }
+
+        .video {
+            position: relative;
+
+            width: 100%;
+
+            padding-bottom: 56.25%;
+
+            height: 0;
+
+            overflow: hidden;
+
+            background-color: #000;
+
+            border-radius: 10px;
+        }
+
+        .video iframe {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: none;
+        }
+
+
+        /* ========================================
+           EXEMPLOS
+        ======================================== */
+
+        .exemplo {
+            background-color: #fff7ed;
+
+            border-left: 5px solid #f59e0b;
+
+            padding: 20px;
+
+            margin: 25px 0;
+
+            border-radius: 5px;
+        }
+
+        .formula {
+            font-size: 20px;
+
+            font-weight: bold;
+
+            background-color: #f3f4f6;
+
+            padding: 15px;
+
+            margin: 15px 0;
+
+            text-align: center;
+
+            border-radius: 5px;
+        }
+
+
+        /* ========================================
+           EXERCÍCIOS
+        ======================================== */
+
+        .exercicio {
+            background-color: #eff6ff;
+
+            padding: 20px;
+
+            margin-top: 25px;
+
+            border-radius: 8px;
+        }
+
+        .botao-resposta {
+            background-color: #1f2937;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 18px;
+
+            margin-top: 10px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+        }
+
+        .botao-resposta:hover {
+            background-color: #374151;
+        }
+
+        .resposta {
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 15px;
+
+            background-color: white;
+
+            border-radius: 5px;
+        }
+
+
+        /* ========================================
+           AULA CONCLUÍDA
+        ======================================== */
+
+        .concluida {
+            background-color: #ecfdf5;
+        }
+
+        .status-aula {
+            margin-top: 15px;
+
+            font-weight: bold;
+
+            color: #047857;
+        }
+
+
+        /* ========================================
+           CONCLUSÃO
+        ======================================== */
+
+        .curso-finalizado {
+            display: none;
+
+            background-color: #ecfdf5;
+
+            border-left: 5px solid #10b981;
+
+            padding: 25px;
+
+            margin-top: 25px;
+
+            border-radius: 8px;
+        }
+
+
+        /* ========================================
+           RODAPÉ
+        ======================================== */
+
+        footer {
+            background-color: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 50px;
+        }
+
+
+        /* ========================================
+           RESPONSIVIDADE
+        ======================================== */
+
+        @media (max-width: 700px) {
+
+            .cabecalho {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+
+                margin-right: 15px;
+            }
+
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 25px 20px;
+            }
+
+            .aula-conteudo {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     CABEÇALHO
+======================================== -->
+
+<header>
+
+    <div class="cabecalho">
+
+        <div class="logo">
+            Escola<span>Obra</span>
+        </div>
+
+        <nav>
+
+            <a href="../../index1.html">
+                Início
+            </a>
+
+            <a href="../index.html">
+                Cursos
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================
+     APRESENTAÇÃO DO CURSO
+======================================== -->
+
+<div class="hero">
+
+    <div class="hero-conteudo">
+
+        <span class="categoria">
+            Curso Gratuito
+        </span>
+
+        <h1>
+            Matemática Básica para Pedreiros
+        </h1>
+
+        <p>
+            Aprenda a matemática utilizada no dia a dia
+            da construção civil através de videoaulas,
+            exemplos práticos e exercícios.
+        </p>
+
+        <a href="#aulas" class="botao">
+            Começar curso
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<main>
+
+
+    <!-- ========================================
+         SOBRE O CURSO
+    ======================================== -->
+
+    <section>
+
+        <h2>
+            Sobre o curso
+        </h2>
+
+        <p>
+            O curso Matemática Básica para Pedreiros
+            foi desenvolvido para ensinar de maneira
+            simples e prática os principais cálculos
+            utilizados no canteiro de obras.
+        </p>
+
+
+        <div class="informacoes">
+
+            <div class="info">
+
+                <strong>
+                    Gratuito
+                </strong>
+
+                Investimento
+
+            </div>
+
+
+            <div class="info">
+
+                <strong>
+                    Básico
+                </strong>
+
+                Nível
+
+            </div>
+
+
+            <div class="info">
+
+                <strong>
+                    Online
+                </strong>
+
+                Modalidade
+
+            </div>
+
+
+            <div class="info">
+
+                <strong>
+                    8 aulas
+                </strong>
+
+                Conteúdo
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CONTEÚDO
+    ======================================== -->
+
+    <section>
+
+        <h2>
+            O que você vai aprender
+        </h2>
+
+        <ul>
+
+            <li>
+                Operações matemáticas básicas.
+            </li>
+
+            <li>
+                Números decimais.
+            </li>
+
+            <li>
+                Conversão de medidas.
+            </li>
+
+            <li>
+                Cálculo de perímetros.
+            </li>
+
+            <li>
+                Cálculo de áreas.
+            </li>
+
+            <li>
+                Cálculo de volumes.
+            </li>
+
+            <li>
+                Porcentagem.
+            </li>
+
+            <li>
+                Regra de três.
+            </li>
+
+            <li>
+                Aplicação da matemática no canteiro.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- ========================================
+         PROGRESSO
+    ======================================== -->
+
+    <section>
+
+        <h2>
+            Seu progresso
+        </h2>
+
+        <div class="progresso-container">
+
+            <div class="barra">
+
+                <div
+                    class="barra-progresso"
+                    id="barraProgresso">
+                </div>
+
+            </div>
+
+            <p id="textoProgresso">
+                0% concluído
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         AULAS
+    ======================================== -->
+
+    <section id="aulas">
+
+        <h2>
+            Aulas do curso
+        </h2>
+
+
+        <!-- ====================================
+             AULA 1
+        ==================================== -->
+
+        <div class="aula" id="blocoAula1">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(1)">
+
+                <span>
+                    Aula 1 — A matemática no canteiro
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula1">
+
+                <h3>
+                    A matemática no canteiro de obras
+                </h3>
+
+                <p>
+                    A matemática está presente em praticamente
+                    todas as atividades realizadas durante
+                    uma obra.
+                </p>
+
+                <p>
+                    Utilizamos cálculos para medir terrenos,
+                    paredes, pisos, concreto, argamassa,
+                    revestimentos e diversos materiais.
+                </p>
+
+
+                <!-- VIDEO AULA 1 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_1"
+                            title="Aula 1 - Matemática no canteiro de obras"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo prático:
+                    </strong>
+
+                    <p>
+                        Uma parede possui 4 metros de
+                        comprimento e 3 metros de altura.
+                    </p>
+
+                    <div class="formula">
+                        Área = 4 × 3 = 12 m²
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(1)">
+
+                    Concluir aula
+
+                </button>
+
+
+                <div
+                    class="status-aula"
+                    id="status1">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 2
+        ==================================== -->
+
+        <div class="aula" id="blocoAula2">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(2)">
+
+                <span>
+                    Aula 2 — Operações básicas
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula2">
+
+                <h3>
+                    As quatro operações
+                </h3>
+
+                <p>
+                    As quatro operações fundamentais
+                    da matemática são:
+                </p>
+
+                <ul>
+
+                    <li>Adição (+)</li>
+
+                    <li>Subtração (-)</li>
+
+                    <li>Multiplicação (×)</li>
+
+                    <li>Divisão (÷)</li>
+
+                </ul>
+
+
+                <!-- VIDEO AULA 2 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_2"
+                            title="Aula 2 - Operações básicas"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Uma obra utiliza 8 sacos de
+                        cimento por dia durante 5 dias.
+                    </p>
+
+                    <div class="formula">
+                        8 × 5 = 40 sacos
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(2)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status2">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 3
+        ==================================== -->
+
+        <div class="aula" id="blocoAula3">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(3)">
+
+                <span>
+                    Aula 3 — Unidades de medida
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula3">
+
+                <h3>
+                    Metro, centímetro e milímetro
+                </h3>
+
+                <p>
+                    Na construção civil utilizamos
+                    frequentemente metros, centímetros
+                    e milímetros.
+                </p>
+
+
+                <!-- VIDEO AULA 3 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_3"
+                            title="Aula 3 - Unidades de medida"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formula">
+
+                    1 metro = 100 centímetros
+
+                    <br>
+
+                    1 centímetro = 10 milímetros
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Uma parede possui 350 centímetros.
+                        Quantos metros ela possui?
+                    </p>
+
+                    <div class="formula">
+                        350 ÷ 100 = 3,50 m
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(3)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status3">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 4
+        ==================================== -->
+
+        <div class="aula" id="blocoAula4">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(4)">
+
+                <span>
+                    Aula 4 — Cálculo de área
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula4">
+
+                <h3>
+                    Área de paredes e pisos
+                </h3>
+
+                <p>
+                    Para calcular a área de uma
+                    superfície retangular utilizamos
+                    comprimento vezes altura ou largura.
+                </p>
+
+
+                <!-- VIDEO AULA 4 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_4"
+                            title="Aula 4 - Cálculo de área"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formula">
+                    Área = comprimento × largura
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Um piso possui 4 metros
+                        de comprimento e 3 metros
+                        de largura.
+                    </p>
+
+                    <div class="formula">
+                        4 × 3 = 12 m²
+                    </div>
+
+                </div>
+
+
+                <div class="exercicio">
+
+                    <strong>
+                        Exercício
+                    </strong>
+
+                    <p>
+                        Uma parede possui 5 metros
+                        de comprimento e 2,80 metros
+                        de altura.
+                    </p>
+
+                    <p>
+                        Qual é a área da parede?
+                    </p>
+
+                    <button
+                        class="botao-resposta"
+                        onclick="mostrarResposta(1)">
+
+                        Ver resposta
+
+                    </button>
+
+
+                    <div
+                        class="resposta"
+                        id="resposta1">
+
+                        5 × 2,80 =
+                        <strong>14 m²</strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(4)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status4">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 5
+        ==================================== -->
+
+        <div class="aula" id="blocoAula5">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(5)">
+
+                <span>
+                    Aula 5 — Cálculo de volume
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula5">
+
+                <h3>
+                    Calculando volumes
+                </h3>
+
+                <p>
+                    O cálculo de volume é muito utilizado
+                    para concreto, escavações, caixas
+                    e outros serviços.
+                </p>
+
+
+                <!-- VIDEO AULA 5 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_5"
+                            title="Aula 5 - Cálculo de volume"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formula">
+
+                    Volume =
+                    comprimento × largura × altura
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Uma peça possui:
+                    </p>
+
+                    <p>
+                        2 m × 1 m × 0,10 m
+                    </p>
+
+                    <div class="formula">
+
+                        2 × 1 × 0,10 =
+                        0,20 m³
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(5)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status5">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 6
+        ==================================== -->
+
+        <div class="aula" id="blocoAula6">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(6)">
+
+                <span>
+                    Aula 6 — Porcentagem
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula6">
+
+                <h3>
+                    Porcentagem na construção
+                </h3>
+
+                <p>
+                    A porcentagem pode ser utilizada
+                    para calcular perdas de materiais,
+                    acréscimos e descontos.
+                </p>
+
+
+                <!-- VIDEO AULA 6 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_6"
+                            title="Aula 6 - Porcentagem"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Precisamos comprar 100 m²
+                        de piso e queremos acrescentar
+                        10% para perdas.
+                    </p>
+
+                    <div class="formula">
+
+                        10% de 100 = 10 m²
+
+                        <br><br>
+
+                        100 + 10 = 110 m²
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(6)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status6">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 7
+        ==================================== -->
+
+        <div class="aula" id="blocoAula7">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(7)">
+
+                <span>
+                    Aula 7 — Regra de três
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula7">
+
+                <h3>
+                    Regra de três simples
+                </h3>
+
+                <p>
+                    A regra de três ajuda a calcular
+                    quantidades proporcionais.
+                </p>
+
+
+                <!-- VIDEO AULA 7 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_7"
+                            title="Aula 7 - Regra de três"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Exemplo:
+                    </strong>
+
+                    <p>
+                        Se 5 sacos de cimento custam
+                        R$ 200, quanto custarão
+                        10 sacos?
+                    </p>
+
+                    <div class="formula">
+
+                        5 → R$ 200
+
+                        <br>
+
+                        10 → X
+
+                        <br><br>
+
+                        X = (10 × 200) ÷ 5
+
+                        <br><br>
+
+                        X = R$ 400
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(7)">
+
+                    Concluir aula
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status7">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================
+             AULA 8
+        ==================================== -->
+
+        <div class="aula" id="blocoAula8">
+
+            <div
+                class="aula-titulo"
+                onclick="abrirAula(8)">
+
+                <span>
+                    Aula 8 — Matemática aplicada à obra
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </div>
+
+
+            <div
+                class="aula-conteudo"
+                id="aula8">
+
+                <h3>
+                    Aplicação prática
+                </h3>
+
+                <p>
+                    Nesta aula utilizaremos os conhecimentos
+                    aprendidos durante o curso para resolver
+                    situações reais de uma obra.
+                </p>
+
+
+                <!-- VIDEO AULA 8 -->
+
+                <div class="video-area">
+
+                    <h3>
+                        ▶ Videoaula
+                    </h3>
+
+                    <div class="video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ID_DO_VIDEO_AULA_8"
+                            title="Aula 8 - Matemática aplicada à obra"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exemplo">
+
+                    <strong>
+                        Situação prática:
+                    </strong>
+
+                    <p>
+                        Um piso possui 6 metros
+                        de comprimento por 5 metros
+                        de largura.
+                    </p>
+
+                    <div class="formula">
+
+                        Área = 6 × 5
+
+                        <br>
+
+                        Área = 30 m²
+
+                    </div>
+
+
+                    <p>
+                        Considerando 10% de perda:
+                    </p>
+
+
+                    <div class="formula">
+
+                        10% de 30 = 3 m²
+
+                        <br><br>
+
+                        Quantidade total =
+                        33 m²
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="botao"
+                    onclick="concluirAula(8)">
+
+                    Concluir curso
+
+                </button>
+
+                <div
+                    class="status-aula"
+                    id="status8">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         CONCLUSÃO
+    ======================================== -->
+
+    <section>
+
+        <h2>
+            Conclusão do curso
+        </h2>
+
+        <p>
+            Ao concluir todas as aulas você terá
+            estudado os principais conceitos de
+            matemática utilizados no cotidiano
+            da construção civil.
+        </p>
+
+
+        <div
+            class="curso-finalizado"
+            id="cursoFinalizado">
+
+            <h3>
+                🎉 Parabéns!
+            </h3>
+
+            <p>
+                Você concluiu o curso
+                <strong>
+                    Matemática Básica para Pedreiros
+                </strong>.
+            </p>
+
+            <p>
+                Continue estudando e desenvolvendo
+                suas habilidades profissionais
+                na EscolaObra.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     RODAPÉ
+======================================== -->
+
+<footer>
+
+    <p>
+        © 2026 EscolaObra
+    </p>
+
+    <p>
+        Formação prática para construção civil.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+    /* ========================================
+       QUANTIDADE TOTAL DE AULAS
+    ======================================== */
+
+    const totalAulas = 8;
+
+
+
+    /* ========================================
+       RECUPERA PROGRESSO SALVO
+    ======================================== */
+
+    let aulasConcluidas =
+        JSON.parse(
+            localStorage.getItem(
+                "matematicaAulasConcluidas"
+            )
+        ) || [];
+
+
+
+    /* ========================================
+       ABRIR E FECHAR AULA
+    ======================================== */
+
+    function abrirAula(numero) {
+
+        const aula =
+            document.getElementById(
+                "aula" + numero
+            );
+
+        aula.classList.toggle("ativo");
+
+    }
+
+
+
+    /* ========================================
+       MOSTRAR RESPOSTA
+    ======================================== */
+
+    function mostrarResposta(numero) {
+
+        const resposta =
+            document.getElementById(
+                "resposta" + numero
+            );
+
+
+        if (
+            resposta.style.display === "block"
+        ) {
+
+            resposta.style.display = "none";
+
+        } else {
+
+            resposta.style.display = "block";
+
+        }
+
+    }
+
+
+
+    /* ========================================
+       CONCLUIR AULA
+    ======================================== */
+
+    function concluirAula(numero) {
+
+        if (
+            !aulasConcluidas.includes(numero)
+        ) {
+
+            aulasConcluidas.push(numero);
+
+
+            localStorage.setItem(
+
+                "matematicaAulasConcluidas",
+
+                JSON.stringify(
+                    aulasConcluidas
+                )
+
+            );
+
+        }
+
+
+        atualizarProgresso();
+
+
+        alert(
+            "Aula " +
+            numero +
+            " concluída!"
+        );
+
+    }
+
+
+
+    /* ========================================
+       ATUALIZAR PROGRESSO
+    ======================================== */
+
+    function atualizarProgresso() {
+
+        const percentual =
+            Math.round(
+
+                (
+                    aulasConcluidas.length /
+                    totalAulas
+                )
+
+                * 100
+
+            );
+
+
+        document.getElementById(
+            "barraProgresso"
+        ).style.width =
+            percentual + "%";
+
+
+        document.getElementById(
+            "textoProgresso"
+        ).textContent =
+            percentual +
+            "% concluído";
+
+
+        /* Marca visualmente aulas concluídas */
+
+        for (
+            let numero = 1;
+            numero <= totalAulas;
+            numero++
+        ) {
+
+            const bloco =
+                document.getElementById(
+                    "blocoAula" + numero
+                );
+
+
+            const status =
+                document.getElementById(
+                    "status" + numero
+                );
+
+
+            if (
+                aulasConcluidas.includes(numero)
+            ) {
+
+                bloco.classList.add(
+                    "concluida"
+                );
+
+
+                status.textContent =
+                    "✓ Aula concluída";
+
+            }
+
+        }
+
+
+
+        /* Curso completo */
+
+        if (
+            aulasConcluidas.length ===
+            totalAulas
+        ) {
+
+            document.getElementById(
+                "textoProgresso"
+            ).textContent =
+                "100% concluído — Curso finalizado!";
+
+
+            document.getElementById(
+                "cursoFinalizado"
+            ).style.display =
+                "block";
+
+        }
+
+    }
+
+
+
+    /* ========================================
+       CARREGAR PROGRESSO AO ABRIR A PÁGINA
+    ======================================== */
+
+    atualizarProgresso();
+
+</script>
+
+
+</body>
+
+</html>
